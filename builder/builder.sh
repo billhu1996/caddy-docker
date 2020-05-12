@@ -125,7 +125,7 @@ EOF
 
 # caddy source
 stage "fetching caddy source"
-git clone https://github.com/billhu1996/caddy -b "$VERSION" /go/src/$IMPORT \
+git clone https://github.com/caddyserver/caddy -b "$VERSION" /go/src/$IMPORT \
     && cd /go/src/$IMPORT
 end_stage
 

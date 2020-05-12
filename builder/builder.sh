@@ -1,14 +1,14 @@
 #!/bin/sh
 
-VERSION=${VERSION:-"1.0.3"}
+VERSION=${VERSION:-"1.0.5"}
 TELEMETRY=${ENABLE_TELEMETRY:-"true"}
-IMPORT="github.com/caddyserver/caddy"
+IMPORT=${IMPORT:-"github.com/caddyserver/caddy"}
 
-# version <1.0.1 needs to use old import path
+# # version <1.0.1 needs to use old import path
 new_import=true
-if [ "$(echo $VERSION | cut -c1)" -eq 0 ] 2>/dev/null || [ "$VERSION" = "1.0.0" ]; then 
-    IMPORT="github.com/mholt/caddy" && new_import=false
-fi
+# if [ "$(echo $VERSION | cut -c1)" -eq 0 ] 2>/dev/null || [ "$VERSION" = "1.0.0" ]; then 
+#     IMPORT="github.com/mholt/caddy" && new_import=false
+# fi
 
 # add `v` prefix for version numbers
 [ "$(echo $VERSION | cut -c1)" -ge 0 ] 2>/dev/null && VERSION="v$VERSION"

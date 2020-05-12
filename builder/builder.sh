@@ -1,8 +1,8 @@
 #!/bin/sh
 
-VERSION=${VERSION:-"1.0.3"}
+VERSION=${VERSION:-"1.0.6"}
 TELEMETRY=${ENABLE_TELEMETRY:-"true"}
-IMPORT="github.com/caddyserver/caddy"
+IMPORT="github.com/billhu1996/caddy"
 
 # version <1.0.1 needs to use old import path
 new_import=true
